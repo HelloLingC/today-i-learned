@@ -2,24 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on MoonLab - TIL</title>
-    <link>http://localhost:1313/tags/linux/</link>
+    <link>http://localhost:43819/tags/linux/</link>
     <description>Recent content in Linux on MoonLab - TIL</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Aug 2024 12:40:45 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Aug 2024 04:40:39 +0800</lastBuildDate>
+    <atom:link href="http://localhost:43819/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ArchLinux Magnifier Shortcut</title>
+      <link>http://localhost:43819/2024/linux-magnifier-shortcut/</link>
+      <pubDate>Sun, 11 Aug 2024 04:40:39 +0800</pubDate>
+      <guid>http://localhost:43819/2024/linux-magnifier-shortcut/</guid>
+      <description>在缩放浏览器时，不小心使用了放大镜 CTRL + Super + 鼠标滚轮即可使用放大镜 我还另外发现了，使用 Super + L 即可重新锁</description>
+    </item>
     <item>
       <title>ArchLinux 打开终端快捷键</title>
-      <link>http://localhost:1313/2024/linux-shortcuts/</link>
+      <link>http://localhost:43819/2024/linux-shortcuts/</link>
       <pubDate>Sat, 10 Aug 2024 12:40:45 +0800</pubDate>
-      <guid>http://localhost:1313/2024/linux-shortcuts/</guid>
+      <guid>http://localhost:43819/2024/linux-shortcuts/</guid>
       <description>CTRL + ALT + T Open terminal ALT + SHIFT + F4 Open terminal here in file explorer 然而在我输入第二个快捷键时，不小心按成了 CTRL + ALT + F4 整个世界清净了</description>
     </item>
     <item>
       <title>Today I Learned</title>
-      <link>http://localhost:1313/2024/today-i-learned/</link>
+      <link>http://localhost:43819/2024/today-i-learned/</link>
       <pubDate>Sat, 10 Aug 2024 12:16:47 +0800</pubDate>
-      <guid>http://localhost:1313/2024/today-i-learned/</guid>
+      <guid>http://localhost:43819/2024/today-i-learned/</guid>
       <description>今天我发现了一种很有意思的记录方法：https://simonwillison.net/2022/N</description>
     </item>
   </channel>

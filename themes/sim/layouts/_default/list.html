@@ -4,7 +4,7 @@
 
 <p>Browse by tags</p>
 <ul class="tag-list">
-    <a href="/">all({{ len $pages }})</a> -
+    <a href="/">all({{ len .Site.RegularPages }})</a> -
     {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
     <li>
         <a href="{{ $taxonomy.Page.RelPermalink }}">{{ $name }} ({{ len $taxonomy }})</a>
