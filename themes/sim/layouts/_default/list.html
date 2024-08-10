@@ -1,0 +1,39 @@
+{{- define "main" }}
+
+<p>Browse by tags</p>
+<ul class="tag-list">
+    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+    <li>
+        <a href="{{ $taxonomy.Page.RelPermalink }}">{{ $name }} ({{ len $taxonomy }})</a>
+    </li>
+    {{ end }}
+</ul>
+
+{{ $pages := union .RegularPages .Sections }}
+{{ if .IsHome }}
+<h2>Welcome</h2>
+{{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ end }}
+
+{{ if and .Title (eq .Type "tags") }}
+<h1>#{{ .Title }}</h1>
+{{ end }}
+
+
+{{ $paginator := .Paginate $pages }} {{ range $index, $page := $paginator.Pages
+}}
+
+<span style="color: #FFC7ED;">#{{ index .Params.tags 0 }}</span>
+<a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Date  | time.Format ":date_medium" }}
+<p>{{ .Summary }}</p>
+{{ end }}
+
+{{ if .Paginator.HasPrev }}
+<a href="{{ .Paginator.Prev.URL }}">Previous</a>
+{{ end }}
+
+{{ if .Paginator.HasNext }}
+<a href="{{ .Paginator.Next.URL }}">Next</a>
+{{ end }}
+
+{{- end }}

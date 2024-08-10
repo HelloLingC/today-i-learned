@@ -1,0 +1,17 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "sim"
+license = "MIT"
+licenselink = "https://github.com/chollinger93/ink-free/blob/master/LICENSE.md"
+description = "Crisp, minimal, personal website and blog theme for Hugo."
+homepage = "https://github.com/chollinger93/ink-free"
+tags = ["minimal", "clean", "blog", "responsive", "personal", "simple", "minimalist", "portfolio", "dark", "privacy", "tech", "reading time", "statistics"]
+features = ["blog", "Clean and minimal", "Responsive", "Social media links", "Syntax highlighting", "Privacy", "GitHub integration", "Random Footers", "Reading Time", "Floating Table of Contents", "Statistics"]
+min_version = "0.87.0"
+
+[author]
+  name = "LingC"
+  homepage = "https://chollinger.com"
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A brief description of your website for SEO purposes.">
+<meta name="keywords" content="moonlab, lingc">
+<meta name="author" content="LingC">
+
+<title>Moonlab - Today I Learned</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <header>
+            <h3 class="site-title">MoonLab - TIL </h3>
+
+<p>This is the place where i store my today-i-learned</p>
+        </header>
+        <main >
+
+<article>
+    <a href="/">Home</a>
+    <h1>Hugo Partial</h1>
+
+    <section><h1 id="partial">Partial</h1>
+<pre tabindex="0"><code>{{ partial &#34;footer.html&#34; }}
+</code></pre><p>我看到有的hugo模板调用partial方法会传入上下文参数，但是不传也不会报错。</p>
+<p>然而 partialCached 就必须传入上下文，否则会报错：</p>
+<pre tabindex="0"><code>Error: error building site: render: failed to render pages: render of &#34;home&#34; failed: &#34;/home/lingc/Documents/today-i-learned/themes/sim/layouts/_default/baseof.html:10:11&#34;: execute of template failed: template: _default/list.html:10:11: executing &#34;_default/list.html&#34; at &lt;partialCached&gt;: wrong number of args for partialCached: want at least 3 got 1
+</code></pre><pre tabindex="0"><code>{{ partialCached &#34;footer.html&#34; . }}
+</code></pre><p>不过这里挺奇怪的，<code>want at least 3 got 1</code>，最终给了2个参数依旧没有报错。</p>
+<h1 id="---">{{- -}}</h1>
+<p>Use {{ }} when you want to keep the whitespace intact.
+Use {{- }} or {{ -}} when you want to trim whitespace before or after the template action, respectively.</p>
+<h1 id="ishome">IsHome</h1>
+<p><a href="https://gohugo.io/methods/page/ishome/">https://gohugo.io/methods/page/ishome/</a></p>
+<p>hugo中页面有三种类型：Page, Section, Home</p>
+<pre tabindex="0"><code>content/
+├── books/
+│   ├── book-1/
+│   │   └── index.md  &lt;-- kind = page
+│   ├── book-2.md     &lt;-- kind = page
+│   └── _index.md     &lt;-- kind = section
+└── _index.md         &lt;-- kind = home
+</code></pre><p>(taxonomony 的页面，如<code>/tag/1</code>也是page)</p>
+<p>使用 <code>{{ if .IsHome }}</code> 就可以判断当前页面是否是主页</p>
+</section>
+
+</article>
+
+
+        </main>
+        <footer>
+            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Moolan-TIL</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://moonlab.top">LingC</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p> 
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A brief description of your website for SEO purposes.">
+<meta name="keywords" content="moonlab, lingc">
+<meta name="author" content="LingC">
+
+<title>Moonlab - Today I Learned</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <header>
+            <h3 class="site-title">MoonLab - TIL </h3>
+
+<p>This is the place where i store my today-i-learned</p>
+        </header>
+        <main >
+
+<article>
+    <a href="/">Home</a>
+    <h1>Hugo Deploy Shell</h1>
+
+    <section><p>For a long time, I always used Hexo as my blogging generator. But when i switched to Hugo, the things&rsquo;re completely different. The deployment methods changed .</p>
+<p>For now, if i wanna host my stuff on somethng like Github Pages, i should utillize so called &ldquo;continuous deployment&rdquo; which leverages on Github Action. I&rsquo;m required to push my primitive content into remote repository, and let the remote finish the building process.</p>
+<p>And the command <code>hugo deploy</code> unlike Hexo is only for deployment for Cloud storage like GCS, Azure Storage, etc&hellip;&hellip; I personally dislike this way. So this is why i wrote a shell script helping me deploy in the &ldquo;legacy&rdquo; way.</p>
+<pre tabindex="0"><code>hugo --minify
+find ./deploy_git -mindepth 1 ! -path &#39;./deploy_git/.git*&#39; -exec rm -r {} +
+cp -r ./public/* ./deploy_git
+cd deploy_git
+git add .
+git commit -m &#34;OwO $(date &#34;+%Y-%m-%d %H:%M:%S&#34;)&#34;
+git push origin master
+</code></pre><p>I use <code>find</code> command with <code>mindepth 1</code> flag which means &ldquo;Do not apply any tests or actions at levels less than levels&rdquo;. So the  <code>rm</code> action won&rsquo;t affect , in this case, the <code>./deploy_git</code> folder. <code>! -path</code> to exclude <code>.git</code> folder, <code>{}</code> is a placeholder which represents the files and directories that are found. <code>+</code> make the <code>rm</code> command being executed with as many arguments as possible at once, rather than executing the command separately for each found item.</p>
+<p>This script&rsquo;ll recursively delete files inside <code>./deploy_git</code> which&rsquo;s a bit low-efficieny. But currently i have no idea how to add a file comparision system. I can predict its a time-consuming task, and really making a mountain out of a molehill.</p>
+<h1 id="tbh">Tbh&hellip;</h1>
+<p>Using the recommended deploy method in the docs is pretty good, since your blog source will be backed up within the repo.</p>
+<p>But&hellip;What if i have periodical backup in the local.</p>
+</section>
+
+</article>
+
+
+        </main>
+        <footer>
+            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Moolan-TIL</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://moonlab.top">LingC</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p> 
+        </footer>
+        
+    </body>
+</html>
