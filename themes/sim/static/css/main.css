@@ -3,6 +3,7 @@ body {
     color: #5F6F65; */
     background-color: #000;
     color: #E2E2B6;
+    font-family: Arial, Helvetica, sans-serif; 
 }
 
 .site-title {
@@ -28,6 +29,7 @@ a:hover {
 }
 
 .tag-list li {
+    padding: 0 5px;
     display: inline-block;
 }
 

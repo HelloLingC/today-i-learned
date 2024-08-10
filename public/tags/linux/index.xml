@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on My New Hugo Site</title>
+    <title>Linux on MoonLab - TIL</title>
     <link>http://localhost:1313/tags/linux/</link>
-    <description>Recent content in Linux on My New Hugo Site</description>
+    <description>Recent content in Linux on MoonLab - TIL</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Aug 2024 12:40:45 +0800</lastBuildDate>

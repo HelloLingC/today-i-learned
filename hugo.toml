@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://til.moonlab.top/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'MoonLab - TIL'
 theme = 'sim'
 
 summaryLength = '50'

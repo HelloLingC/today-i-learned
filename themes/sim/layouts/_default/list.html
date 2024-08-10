@@ -1,7 +1,10 @@
 {{- define "main" }}
 
+{{ $pages := union .RegularPages .Sections }}
+
 <p>Browse by tags</p>
 <ul class="tag-list">
+    <a href="/">all({{ len $pages }})</a> -
     {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
     <li>
         <a href="{{ $taxonomy.Page.RelPermalink }}">{{ $name }} ({{ len $taxonomy }})</a>
@@ -9,7 +12,7 @@
     {{ end }}
 </ul>
 
-{{ $pages := union .RegularPages .Sections }}
+
 {{ if .IsHome }}
 <h2>Welcome</h2>
 {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
