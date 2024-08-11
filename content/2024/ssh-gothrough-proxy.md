@@ -3,7 +3,7 @@ title: 'SSH 客户端配置代理'
 date: 2024-08-11T14:09:25+08:00
 draft: false
 categories:
-tags: ssh]
+tags: [linux]
 ---
 
 其实是机场屏蔽了22端口，才导致我用不了ssh。但既然查都查了，还是把ssh客户端单独配置代理方法记录下来吧。

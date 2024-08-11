@@ -32,11 +32,11 @@
 {{ end }}
 
 {{ if .Paginator.HasPrev }}
-<a href="{{ .Paginator.Prev.URL }}">Previous</a>
+<a href="{{ .Paginator.Prev.URL }}">&lt; Previous</a>
 {{ end }}
 
 {{ if .Paginator.HasNext }}
-<a href="{{ .Paginator.Next.URL }}">Next</a>
+<a href="{{ .Paginator.Next.URL }}">Next &gt;</a>
 {{ end }}
 
 {{- end }}

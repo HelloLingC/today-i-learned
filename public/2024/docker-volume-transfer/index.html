@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A brief description of your website for SEO purposes.">
+<meta name="keywords" content="moonlab, lingc">
+<meta name="author" content="LingC">
+
+<title>Moonlab - Today I Learned</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <header>
+            <h3 class="site-title">MoonLab - TIL </h3>
+
+<p>This is where i store my today-i-learned</p>
+<p>You may also wannna visit <a href="https://moonlab.top">my blog</a></p>
+
+        </header>
+        <main >
+
+<article>
+    <a href="/">Home</a>
+    <h1>Docker Volume迁移</h1>
+
+    <section><p>其实我一直都用不好docker，因为我的经验很少，直到现在我也没有遇到非使用docker不可的情况，所以其实我就没有什么动力去用docker。而且我一直在怀疑，在低配的个人服务器上，运行docker的性能究竟如何。</p>
+<p>Docker中有两种Volume（在刚刚我发现它们的存在，并上网查询之前，我称这两者为Independent Volume和Hidden Volume）：</p>
+<ul>
+<li>
+<p>Named Volumes</p>
+</li>
+<li>
+<p>Anonymous Volumes</p>
+</li>
+</ul>
+<p><code>Named Volumes</code> 是通过 <code>docker volume create</code> 命令或在 <code>docker-compose.yml</code> 中声明的。</p>
+<p>Persistence: Named volumes are stored in a Docker-managed directory (/var/lib/docker/volumes/ by default) and are not tied to the lifecycle of a container.</p>
+<p><code>Anonymous Volumes</code> 则是由 <code>docker run</code> 的 <code>-v</code> flag创建的。</p>
+<p>Persistence: They are still stored in Docker’s volume directory, but they are harder to manage directly because they don’t have a user-defined name.</p>
+<h1 id="迁移volume">迁移Volume</h1>
+<p>接着就可以步入正题，转移Volume了。因为我所搭建是服务是有公共image的，我也没有修改任何代码，所以不需要备份image。</p>
+<h2 id="create-tarball">Create tarball</h2>
+<pre tabindex="0"><code>$ docker exec memos tar czf /tmp/memos_backup.tar.gz -C /var/opt/memos .
+
+$ docker cp memos:/tmp/memos_backup.tar.gz ~/memos_backup.tar.gz
+</code></pre><p>之后就需要把备份迁移到另一台服务器中，服务器要先装好镜像。</p>
+<pre tabindex="0"><code>docker run -d \
+  --init \
+  --name memos \
+  --publish 5230:5230 \
+  --volume ~/.memos/:/var/opt/memos \
+  neosmemo/memos:stable
+</code></pre><p>（这里 <code>--volume ~/.memos/:/var/opt/memos</code> 会把<code>/var/opt/memos</code> mount 到host的文件夹中。同时也可以命名卷，如<code> --volume my_volume:/var/opt/memos</code> ）</p>
+<p>在进行导入的时候，容器要保持开启。</p>
+<pre tabindex="0"><code>$ docker cp ~/memos_backup.tar.gz memos:/tmp/memos_backup.tar.gz
+$ docker exec memos tar xzf /tmp/memos_backup.tar.gz -C /var/opt/memos
+</code></pre></section>
+
+</article>
+
+
+        </main>
+        <footer>
+            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">All articles</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://moonlab.top">LingC</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+
+        </footer>
+        
+    </body>
+</html>

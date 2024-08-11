@@ -2,52 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2024s on MoonLab - TIL</title>
-    <link>http://localhost:43819/2024/</link>
+    <link>http://localhost:1313/2024/</link>
     <description>Recent content in 2024s on MoonLab - TIL</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Aug 2024 04:51:37 +0800</lastBuildDate>
-    <atom:link href="http://localhost:43819/2024/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Aug 2024 18:48:43 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/2024/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>黑暗/日间主题切换</title>
-      <link>http://localhost:43819/2024/css-dark-theme-switch/</link>
+      <title>Docker Volume迁移</title>
+      <link>http://localhost:1313/2024/docker-volume-transfer/</link>
+      <pubDate>Sun, 11 Aug 2024 18:48:43 +0800</pubDate>
+      <guid>http://localhost:1313/2024/docker-volume-transfer/</guid>
+      <description>其实我一直都用不好docker，因为我的经验很少，直到现在我也没有遇到非使用docker不可的情况，</description>
+    </item>
+    <item>
+      <title>ssh-keygen</title>
+      <link>http://localhost:1313/2024/ssh-cannot-find-hostkey/</link>
+      <pubDate>Sun, 11 Aug 2024 15:50:43 +0800</pubDate>
+      <guid>http://localhost:1313/2024/ssh-cannot-find-hostkey/</guid>
+      <description>When i used systemctl status sshd, i saw:&#xA;Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ecdsa_key Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ed25519_key Use sudo ssh-keygen -A to generate all missing host keys.</description>
+    </item>
+    <item>
+      <title>服务器配置ssh仅允许使用pubkey验证</title>
+      <link>http://localhost:1313/2024/linux-login-with-sshkey/</link>
+      <pubDate>Sun, 11 Aug 2024 15:32:43 +0800</pubDate>
+      <guid>http://localhost:1313/2024/linux-login-with-sshkey/</guid>
+      <description>本地要有keypair，可以是rsa也可以是ed25519。 $ ssh-keygen 将本地的pubkey复制到服务器的~</description>
+    </item>
+    <item>
+      <title>SSH 客户端配置代理</title>
+      <link>http://localhost:1313/2024/ssh-gothrough-proxy/</link>
+      <pubDate>Sun, 11 Aug 2024 14:09:25 +0800</pubDate>
+      <guid>http://localhost:1313/2024/ssh-gothrough-proxy/</guid>
+      <description>其实是机场屏蔽了22端口，才导致我用不了ssh。但既然查都查了，还是把ssh客户端单独配置代理方法记</description>
+    </item>
+    <item>
+      <title>CSS 黑暗/日间主题切换</title>
+      <link>http://localhost:1313/2024/css-dark-theme-switch/</link>
       <pubDate>Sun, 11 Aug 2024 04:51:37 +0800</pubDate>
-      <guid>http://localhost:43819/2024/css-dark-theme-switch/</guid>
-      <description></description>
+      <guid>http://localhost:1313/2024/css-dark-theme-switch/</guid>
+      <description>使用媒体查询prefers-color-scheme @media (prefers-color-scheme: {mode}) { } :root { --color: #333; --bg-color: #eee; } @media (prefers-color-scheme: dark) { :root { --color: #ccc; --bg-color: #1f1f1f; } }</description>
     </item>
     <item>
       <title>ArchLinux Magnifier Shortcut</title>
-      <link>http://localhost:43819/2024/linux-magnifier-shortcut/</link>
+      <link>http://localhost:1313/2024/linux-magnifier-shortcut/</link>
       <pubDate>Sun, 11 Aug 2024 04:40:39 +0800</pubDate>
-      <guid>http://localhost:43819/2024/linux-magnifier-shortcut/</guid>
+      <guid>http://localhost:1313/2024/linux-magnifier-shortcut/</guid>
       <description>在缩放浏览器时，不小心使用了放大镜 CTRL + Super + 鼠标滚轮即可使用放大镜 我还另外发现了，使用 Super + L 即可重新锁</description>
     </item>
     <item>
       <title>Hugo Deploy Shell</title>
-      <link>http://localhost:43819/2024/hugo-deploy-shell/</link>
+      <link>http://localhost:1313/2024/hugo-deploy-shell/</link>
       <pubDate>Sat, 10 Aug 2024 16:01:59 +0800</pubDate>
-      <guid>http://localhost:43819/2024/hugo-deploy-shell/</guid>
+      <guid>http://localhost:1313/2024/hugo-deploy-shell/</guid>
       <description>For a long time, I always used Hexo as my blogging generator. But when i switched to Hugo, the things&amp;rsquo;re completely different. The deployment methods changed .&#xA;For now, if i wanna host my stuff on somethng like Github Pages, i should utillize so called &amp;ldquo;continuous deployment&amp;rdquo; which leverages on Github Action.</description>
     </item>
     <item>
       <title>Hugo Partial</title>
-      <link>http://localhost:43819/2024/hugo-partial/</link>
+      <link>http://localhost:1313/2024/hugo-partial/</link>
       <pubDate>Sat, 10 Aug 2024 14:04:26 +0800</pubDate>
-      <guid>http://localhost:43819/2024/hugo-partial/</guid>
+      <guid>http://localhost:1313/2024/hugo-partial/</guid>
       <description>Partial {{ partial &amp;#34;footer.html&amp;#34; }} 我看到有的hugo模板调用partial方法会传入上下文参数，但是不传也不会报错。 然而 partialCached 就</description>
     </item>
     <item>
       <title>ArchLinux 打开终端快捷键</title>
-      <link>http://localhost:43819/2024/linux-shortcuts/</link>
+      <link>http://localhost:1313/2024/linux-shortcuts/</link>
       <pubDate>Sat, 10 Aug 2024 12:40:45 +0800</pubDate>
-      <guid>http://localhost:43819/2024/linux-shortcuts/</guid>
+      <guid>http://localhost:1313/2024/linux-shortcuts/</guid>
       <description>CTRL + ALT + T Open terminal ALT + SHIFT + F4 Open terminal here in file explorer 然而在我输入第二个快捷键时，不小心按成了 CTRL + ALT + F4 整个世界清净了</description>
     </item>
     <item>
       <title>Today I Learned</title>
-      <link>http://localhost:43819/2024/today-i-learned/</link>
+      <link>http://localhost:1313/2024/today-i-learned/</link>
       <pubDate>Sat, 10 Aug 2024 12:16:47 +0800</pubDate>
-      <guid>http://localhost:43819/2024/today-i-learned/</guid>
+      <guid>http://localhost:1313/2024/today-i-learned/</guid>
       <description>今天我发现了一种很有意思的记录方法：https://simonwillison.net/2022/N</description>
     </item>
   </channel>

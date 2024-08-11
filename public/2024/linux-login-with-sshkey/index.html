@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A brief description of your website for SEO purposes.">
+<meta name="keywords" content="moonlab, lingc">
+<meta name="author" content="LingC">
+
+<title>Moonlab - Today I Learned</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <header>
+            <h3 class="site-title">MoonLab - TIL </h3>
+
+<p>This is where i store my today-i-learned</p>
+<p>You may also wannna visit <a href="https://moonlab.top">my blog</a></p>
+
+        </header>
+        <main >
+
+<article>
+    <a href="/">Home</a>
+    <h1>服务器配置ssh仅允许使用pubkey验证</h1>
+
+    <section><p>本地要有keypair，可以是rsa也可以是ed25519。</p>
+<pre tabindex="0"><code>$ ssh-keygen
+</code></pre><p>将本地的pubkey复制到服务器的<code>~/.ssh/authorized_keys</code>中：</p>
+<pre tabindex="0"><code>$ ssh-copy-id username@host
+</code></pre><p>然后修改服务器的ssh服务器配置：</p>
+<pre tabindex="0"><code>$ sudo nano /etc/ssh/sshd_config
+</code></pre><pre tabindex="0"><code>PubkeyAuthentication yes
+PasswordAuthentication no
+AuthorizedKeysFile      .ssh/authorized_keys
+PasswordAuthentication no
+</code></pre></section>
+
+</article>
+
+
+        </main>
+        <footer>
+            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">All articles</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://moonlab.top">LingC</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+
+        </footer>
+        
+    </body>
+</html>

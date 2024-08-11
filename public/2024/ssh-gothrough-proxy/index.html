@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A brief description of your website for SEO purposes.">
+<meta name="keywords" content="moonlab, lingc">
+<meta name="author" content="LingC">
+
+<title>Moonlab - Today I Learned</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <header>
+            <h3 class="site-title">MoonLab - TIL </h3>
+
+<p>This is where i store my today-i-learned</p>
+<p>You may also wannna visit <a href="https://moonlab.top">my blog</a></p>
+
+        </header>
+        <main >
+
+<article>
+    <a href="/">Home</a>
+    <h1>SSH 客户端配置代理</h1>
+
+    <section><p>其实是机场屏蔽了22端口，才导致我用不了ssh。但既然查都查了，还是把ssh客户端单独配置代理方法记录下来吧。</p>
+<p>在我用ssh连接服务器的时候，每次使用代理就会出现EOF。我本来以为是我代理服务器的问题，结果每个代理服务器都是一致的导致连接出现EOF。我突然想到，会不会是因为ssh连接没有走代理呢？我看到有人用ssh连接git也会出现不走代理的情况，不过由于我用https连接git，所以我就没有遇到。</p>
+<p>而因为地域问题，我如果直连服务器速度是很慢很慢的。我是完全忍受不了龟速的终端输入，所以这个问题必须要解决了。</p>
+<p>使用这个命令即可让ssh客户端走代理。</p>
+<p>（要先安装netcat）</p>
+<pre tabindex="0"><code>$ ssh -o ProxyCommand=&#34;nc -X 5 -x 127.0.0.1:1080 %h %p&#34; root@server
+</code></pre><p><code>nc</code> 命令中 <code>-X </code>是指定代理协议，4是socks4协议，5是socks5协议。</p>
+<p>不过如果使用类似Termius的应用，也可以选择修改ssh配置文件（不过有的ssh客户端提供了修改代理的选项）。</p>
+<p>我是Linux系统，ssh客户端配置是<code>~/.ssh/config</code></p>
+<p>只需要添加如下：</p>
+<pre tabindex="0"><code>Host *
+    ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
+</code></pre><hr>
+<p>Refs</p>
+<p><a href="https://kuokuo.io/2019/07/01/ssh-over-http-or-socks/">https://kuokuo.io/2019/07/01/ssh-over-http-or-socks/</a></p>
+</section>
+
+</article>
+
+
+        </main>
+        <footer>
+            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">All articles</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://moonlab.top">LingC</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+
+        </footer>
+        
+    </body>
+</html>

@@ -46,10 +46,9 @@ pre {
 }
 
 code {
-
 /*     background-color: #e7f3ff;  */
-    color: #d63384; /* Text color */
-    padding: 2px 4px; /* Padding around the text */
+    color: #d63384;
+    padding: 2px 4px;
     border-radius: 3px; /* Rounded corners */
     font-family: 'Courier New', Courier, monospace; /* Monospace font */
 }

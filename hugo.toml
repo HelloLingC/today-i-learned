@@ -5,3 +5,9 @@ theme = 'sim'
 
 summaryLength = '50'
 hasCJKLanguage = true
+
+[pagination]
+  disableAliases = false
+  pagerSize = 7
+  path = 'page'
+
