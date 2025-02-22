@@ -5,7 +5,7 @@
     <link>http://localhost:1313/tags/css/</link>
     <description>Recent content in Css on MoonLab - TIL</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sun, 11 Aug 2024 04:51:37 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,7 +13,7 @@
       <link>http://localhost:1313/2024/css-dark-theme-switch/</link>
       <pubDate>Sun, 11 Aug 2024 04:51:37 +0800</pubDate>
       <guid>http://localhost:1313/2024/css-dark-theme-switch/</guid>
-      <description>使用媒体查询prefers-color-scheme @media (prefers-color-scheme: {mode}) { } :root { --color: #333; --bg-color: #eee; } @media (prefers-color-scheme: dark) { :root { --color: #ccc; --bg-color: #1f1f1f; } }</description>
+      <description>&lt;p&gt;使用媒体查询prefers-color-scheme&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@media (prefers-color-scheme: {mode}) {&#xD;&#xA;&#xD;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:root {&#xD;&#xA;  --color: #333;&#xD;&#xA;  --bg-color: #eee;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;@media (prefers-color-scheme: dark) {&#xD;&#xA;  :root {&#xD;&#xA;    --color: #ccc;&#xD;&#xA;    --bg-color: #1f1f1f;&#xD;&#xA;  }&#xD;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果要判断当前的主题，可以用：&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

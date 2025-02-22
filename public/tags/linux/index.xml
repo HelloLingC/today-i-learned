@@ -5,50 +5,57 @@
     <link>http://localhost:1313/tags/linux/</link>
     <description>Recent content in Linux on MoonLab - TIL</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 11 Aug 2024 15:50:43 +0800</lastBuildDate>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 13 Aug 2024 17:17:43 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pacman Mirrorlist更新</title>
+      <link>http://localhost:1313/2024/pacman-source-list/</link>
+      <pubDate>Tue, 13 Aug 2024 17:17:43 +0800</pubDate>
+      <guid>http://localhost:1313/2024/pacman-source-list/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ sudo pacman -Sy&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;出现了：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;error: failed retrieving file &amp;#39;core.db&amp;#39; from mirror.f4st.host : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds&#xD;&#xA;error: failed retrieving file &amp;#39;extra.db&amp;#39; from mirror.f4st.host : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds&#xD;&#xA;error: failed retrieving file &amp;#39;multilib.db&amp;#39; from mirror.f4st.host : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds&#xD;&#xA;warning: too many errors from mirror.f4st.host, skipping for the remainder of this transaction&#xD;&#xA;error: failed retrieving file &amp;#39;core.db&amp;#39; from mirror.f4st.host : SSL connection timeout&#xD;&#xA;error: failed retrieving file &amp;#39;extra.db&amp;#39; from mirror.f4st.host : SSL connection timeout&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;而&lt;code&gt;mirror.f4st.host&lt;/code&gt;已经在2024.6.30关闭力：https://lists.archlinux.org/archives/list/arch-mirrors@lists.archlinux.org/message/VQAMXLF6RIZHXQF6O3UO3AWWPSEQFCB7/&lt;/p&gt;</description>
+    </item>
     <item>
       <title>ssh-keygen</title>
       <link>http://localhost:1313/2024/ssh-cannot-find-hostkey/</link>
       <pubDate>Sun, 11 Aug 2024 15:50:43 +0800</pubDate>
       <guid>http://localhost:1313/2024/ssh-cannot-find-hostkey/</guid>
-      <description>When i used systemctl status sshd, i saw:&#xA;Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ecdsa_key Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ed25519_key Use sudo ssh-keygen -A to generate all missing host keys.</description>
+      <description>&lt;p&gt;When i used systemctl status sshd, i saw:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ecdsa_key&#xD;&#xA;Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ed25519_key&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Use &lt;code&gt;sudo ssh-keygen -A&lt;/code&gt; to generate all missing host keys.&lt;/p&gt;</description>
     </item>
     <item>
       <title>服务器配置ssh仅允许使用pubkey验证</title>
       <link>http://localhost:1313/2024/linux-login-with-sshkey/</link>
       <pubDate>Sun, 11 Aug 2024 15:32:43 +0800</pubDate>
       <guid>http://localhost:1313/2024/linux-login-with-sshkey/</guid>
-      <description>本地要有keypair，可以是rsa也可以是ed25519。 $ ssh-keygen 将本地的pubkey复制到服务器的~</description>
+      <description>&lt;p&gt;本地要有keypair，可以是rsa也可以是ed25519。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ssh-keygen&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将本地的pubkey复制到服务器的&lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;中：&lt;/p&gt;</description>
     </item>
     <item>
       <title>SSH 客户端配置代理</title>
       <link>http://localhost:1313/2024/ssh-gothrough-proxy/</link>
       <pubDate>Sun, 11 Aug 2024 14:09:25 +0800</pubDate>
       <guid>http://localhost:1313/2024/ssh-gothrough-proxy/</guid>
-      <description>其实是机场屏蔽了22端口，才导致我用不了ssh。但既然查都查了，还是把ssh客户端单独配置代理方法记</description>
+      <description>&lt;p&gt;其实是机场屏蔽了22端口，才导致我用不了ssh。但既然查都查了，还是把ssh客户端单独配置代理方法记录下来吧。&lt;/p&gt;</description>
     </item>
     <item>
       <title>ArchLinux Magnifier Shortcut</title>
       <link>http://localhost:1313/2024/linux-magnifier-shortcut/</link>
       <pubDate>Sun, 11 Aug 2024 04:40:39 +0800</pubDate>
       <guid>http://localhost:1313/2024/linux-magnifier-shortcut/</guid>
-      <description>在缩放浏览器时，不小心使用了放大镜 CTRL + Super + 鼠标滚轮即可使用放大镜 我还另外发现了，使用 Super + L 即可重新锁</description>
+      <description>&lt;p&gt;在缩放浏览器时，不小心使用了放大镜&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;CTRL + Super + 鼠标滚轮&lt;/code&gt;即可使用放大镜&lt;/p&gt;&#xA;&lt;p&gt;我还另外发现了，使用 &lt;code&gt;Super + L&lt;/code&gt; 即可重新锁定电脑，适合在离开电脑时使用。&lt;/p&gt;</description>
     </item>
     <item>
       <title>ArchLinux 打开终端快捷键</title>
       <link>http://localhost:1313/2024/linux-shortcuts/</link>
       <pubDate>Sat, 10 Aug 2024 12:40:45 +0800</pubDate>
       <guid>http://localhost:1313/2024/linux-shortcuts/</guid>
-      <description>CTRL + ALT + T Open terminal ALT + SHIFT + F4 Open terminal here in file explorer 然而在我输入第二个快捷键时，不小心按成了 CTRL + ALT + F4 整个世界清净了</description>
+      <description>&lt;p&gt;CTRL + ALT + T Open terminal&lt;/p&gt;&#xA;&lt;p&gt;ALT + SHIFT + F4 Open terminal here in file explorer&lt;/p&gt;&#xA;&lt;p&gt;然而在我输入第二个快捷键时，不小心按成了&lt;/p&gt;&#xA;&lt;p&gt;CTRL + ALT + F4&lt;/p&gt;&#xA;&lt;p&gt;整个世界清净了，似乎这个快捷键会关闭所有窗口，包括我的桌面程序KDE也死掉了&lt;/p&gt;</description>
     </item>
     <item>
       <title>Today I Learned</title>
       <link>http://localhost:1313/2024/today-i-learned/</link>
       <pubDate>Sat, 10 Aug 2024 12:16:47 +0800</pubDate>
       <guid>http://localhost:1313/2024/today-i-learned/</guid>
-      <description>今天我发现了一种很有意思的记录方法：https://simonwillison.net/2022/N</description>
+      <description>&lt;p&gt;今天我发现了一种很有意思的记录方法：https://simonwillison.net/2022/Nov/6/what-to-blog-about/&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -5,15 +5,22 @@
     <link>http://localhost:1313/tags/docker/</link>
     <description>Recent content in Docker on MoonLab - TIL</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 11 Aug 2024 18:48:43 +0800</lastBuildDate>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 12 Aug 2024 06:35:43 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux 使用zsh</title>
+      <link>http://localhost:1313/2024/linux-zsh/</link>
+      <pubDate>Mon, 12 Aug 2024 06:35:43 +0800</pubDate>
+      <guid>http://localhost:1313/2024/linux-zsh/</guid>
+      <description>&lt;p&gt;先查看当前的shell：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ echo $SHELL&#xD;&#xA;/bin/bash&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装zsh:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ sudo pacman -S zsh zsh-completions&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;making-zsh-the-default-shell&#34;&gt;Making zsh the default shell&lt;/h1&gt;&#xA;&lt;p&gt;List all installed shell:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ chsh -l&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将&lt;code&gt;/bin/zsh&lt;/code&gt;设为默认：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ chsh -s /bin/zsh&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;docker run -d &lt;br&gt;&#xA;&amp;ndash;name artalk &lt;br&gt;&#xA;-p 8080:23366 &lt;br&gt;&#xA;-v $(pwd)/data:/data &lt;br&gt;&#xA;-e &amp;ldquo;ATK_LOCALE=zh-CN&amp;rdquo; &lt;br&gt;&#xA;-e &amp;ldquo;ATK_SITE_DEFAULT=Mooblab&amp;rdquo; &lt;br&gt;&#xA;-e &amp;ldquo;ATK_TRUSTED_DOMAINS=https://moonlab.top&amp;rdquo; &lt;br&gt;&#xA;artalk/artalk-go&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Docker Volume迁移</title>
       <link>http://localhost:1313/2024/docker-volume-transfer/</link>
       <pubDate>Sun, 11 Aug 2024 18:48:43 +0800</pubDate>
       <guid>http://localhost:1313/2024/docker-volume-transfer/</guid>
-      <description>其实我一直都用不好docker，因为我的经验很少，直到现在我也没有遇到非使用docker不可的情况，</description>
+      <description>&lt;p&gt;其实我一直都用不好docker，因为我的经验很少，直到现在我也没有遇到非使用docker不可的情况，所以其实我就没有什么动力去用docker。而且我一直在怀疑，在低配的个人服务器上，运行docker的性能究竟如何。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

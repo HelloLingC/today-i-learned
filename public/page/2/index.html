@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<meta name="generator" content="Hugo 0.131.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+	<meta name="generator" content="Hugo 0.143.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A brief description of your website for SEO purposes.">
 <meta name="keywords" content="moonlab, lingc">
@@ -30,14 +30,18 @@
 
 <p>Browse by tags</p>
 <ul class="tag-list">
-    <a href="/">all(10)</a> -
+    <a href="/">all(26)</a> -
     
     <li>
         <a href="/tags/css/">css (1)</a>
     </li>
     
     <li>
-        <a href="/tags/docker/">docker (1)</a>
+        <a href="/tags/docker/">docker (2)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/git/">git (2)</a>
     </li>
     
     <li>
@@ -45,7 +49,27 @@
     </li>
     
     <li>
-        <a href="/tags/linux/">linux (6)</a>
+        <a href="/tags/javascript/">javascript (1)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/linux/">linux (7)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/python/">python (7)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/system/">system (1)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/typescript/">typescript (2)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/vim/">vim (1)</a>
     </li>
     
 </ul>
@@ -61,19 +85,78 @@
 
  
 
-<span style="color: #FFC7ED;">#hugo</span>
-<a href="http://localhost:1313/2024/hugo-partial/">Hugo Partial</a> - Aug 10, 2024
-<p>Partial {{ partial &#34;footer.html&#34; }} 我看到有的hugo模板调用partial方法会传入上下文参数，但是不传也不会报错。 然而 partialCached 就</p>
+<span style="color: #FFC7ED;">#docker</span>
+<a href="http://localhost:1313/2024/linux-zsh/">Linux 使用zsh</a> - Aug 12, 2024
+<p><p>先查看当前的shell：</p>
+<pre tabindex="0"><code>$ echo $SHELL
+/bin/bash
+</code></pre><p>安装zsh:</p>
+<pre tabindex="0"><code>$ sudo pacman -S zsh zsh-completions
+</code></pre><h1 id="making-zsh-the-default-shell">Making zsh the default shell</h1>
+<p>List all installed shell:</p>
+<pre tabindex="0"><code>$ chsh -l
+</code></pre><p>将<code>/bin/zsh</code>设为默认：</p>
+<pre tabindex="0"><code>$ chsh -s /bin/zsh
+</code></pre><p>docker run -d <br>
+&ndash;name artalk <br>
+-p 8080:23366 <br>
+-v $(pwd)/data:/data <br>
+-e &ldquo;ATK_LOCALE=zh-CN&rdquo; <br>
+-e &ldquo;ATK_SITE_DEFAULT=Mooblab&rdquo; <br>
+-e &ldquo;ATK_TRUSTED_DOMAINS=https://moonlab.top&rdquo; <br>
+artalk/artalk-go</p></p>
+
+
+<span style="color: #FFC7ED;">#docker</span>
+<a href="http://localhost:1313/2024/docker-volume-transfer/">Docker Volume迁移</a> - Aug 11, 2024
+<p><p>其实我一直都用不好docker，因为我的经验很少，直到现在我也没有遇到非使用docker不可的情况，所以其实我就没有什么动力去用docker。而且我一直在怀疑，在低配的个人服务器上，运行docker的性能究竟如何。</p></p>
 
 
 <span style="color: #FFC7ED;">#linux</span>
-<a href="http://localhost:1313/2024/linux-shortcuts/">ArchLinux 打开终端快捷键</a> - Aug 10, 2024
-<p>CTRL + ALT + T Open terminal ALT + SHIFT + F4 Open terminal here in file explorer 然而在我输入第二个快捷键时，不小心按成了 CTRL + ALT + F4 整个世界清净了</p>
+<a href="http://localhost:1313/2024/ssh-cannot-find-hostkey/">ssh-keygen</a> - Aug 11, 2024
+<p><p>When i used systemctl status sshd, i saw:</p>
+<pre tabindex="0"><code>Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ecdsa_key
+Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ed25519_key
+</code></pre><p>Use <code>sudo ssh-keygen -A</code> to generate all missing host keys.</p></p>
 
 
 <span style="color: #FFC7ED;">#linux</span>
-<a href="http://localhost:1313/2024/today-i-learned/">Today I Learned</a> - Aug 10, 2024
-<p>今天我发现了一种很有意思的记录方法：https://simonwillison.net/2022/N</p>
+<a href="http://localhost:1313/2024/linux-login-with-sshkey/">服务器配置ssh仅允许使用pubkey验证</a> - Aug 11, 2024
+<p><p>本地要有keypair，可以是rsa也可以是ed25519。</p>
+<pre tabindex="0"><code>$ ssh-keygen
+</code></pre><p>将本地的pubkey复制到服务器的<code>~/.ssh/authorized_keys</code>中：</p></p>
+
+
+<span style="color: #FFC7ED;">#linux</span>
+<a href="http://localhost:1313/2024/ssh-gothrough-proxy/">SSH 客户端配置代理</a> - Aug 11, 2024
+<p><p>其实是机场屏蔽了22端口，才导致我用不了ssh。但既然查都查了，还是把ssh客户端单独配置代理方法记录下来吧。</p></p>
+
+
+<span style="color: #FFC7ED;">#css</span>
+<a href="http://localhost:1313/2024/css-dark-theme-switch/">CSS 黑暗/日间主题切换</a> - Aug 11, 2024
+<p><p>使用媒体查询prefers-color-scheme</p>
+<pre tabindex="0"><code>@media (prefers-color-scheme: {mode}) {
+
+}
+</code></pre><pre tabindex="0"><code>:root {
+  --color: #333;
+  --bg-color: #eee;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: #ccc;
+    --bg-color: #1f1f1f;
+  }
+}
+</code></pre><p>如果要判断当前的主题，可以用：</p></p>
+
+
+<span style="color: #FFC7ED;">#linux</span>
+<a href="http://localhost:1313/2024/linux-magnifier-shortcut/">ArchLinux Magnifier Shortcut</a> - Aug 11, 2024
+<p><p>在缩放浏览器时，不小心使用了放大镜</p>
+<p><code>CTRL + Super + 鼠标滚轮</code>即可使用放大镜</p>
+<p>我还另外发现了，使用 <code>Super + L</code> 即可重新锁定电脑，适合在离开电脑时使用。</p></p>
 
 
 
@@ -81,9 +164,11 @@
 
 
 
+<a href="/page/3/">Next &gt;</a>
+
         </main>
         <footer>
-            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">All articles</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://moonlab.top">LingC</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">All articles</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://moonlab.top">LingC</a> are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
 
         </footer>
         

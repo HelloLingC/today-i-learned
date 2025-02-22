@@ -29,14 +29,18 @@
 
 <p>Browse by tags</p>
 <ul class="tag-list">
-    <a href="/">all(10)</a> -
+    <a href="/">all(26)</a> -
     
     <li>
         <a href="/tags/css/">css (1)</a>
     </li>
     
     <li>
-        <a href="/tags/docker/">docker (1)</a>
+        <a href="/tags/docker/">docker (2)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/git/">git (2)</a>
     </li>
     
     <li>
@@ -44,7 +48,27 @@
     </li>
     
     <li>
-        <a href="/tags/linux/">linux (6)</a>
+        <a href="/tags/javascript/">javascript (1)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/linux/">linux (7)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/python/">python (7)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/system/">system (1)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/typescript/">typescript (2)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/vim/">vim (1)</a>
     </li>
     
 </ul>
@@ -57,51 +81,118 @@
 
  
 
-<span style="color: #FFC7ED;">#docker</span>
-<a href="http://localhost:1313/2024/docker-volume-transfer/">Docker Volume迁移</a> - Aug 11, 2024
-<p>其实我一直都用不好docker，因为我的经验很少，直到现在我也没有遇到非使用docker不可的情况，</p>
+<span style="color: #FFC7ED;">#python</span>
+<a href="http://localhost:1313/2024/python-string-format/">Python String Format</a> - Sep 26, 2024
+<p><h1 id="f-strings-python-36">f-strings (Python 3.6+)</h1>
+<pre tabindex="0"><code>name = &#34;Alice&#34;
+age = 30
+formatted_string = f&#34;My name is {name} and I am {age} years old.&#34;
+</code></pre><h1 id="strformat">str.format()</h1>
+<pre tabindex="0"><code>name = &#34;Bob&#34;
+age = 25
+formatted_string = &#34;My name is {} and I am {} years old.&#34;.format(name, age)
+</code></pre><h1 id="percent--formatting">Percent % formatting</h1>
+<pre tabindex="0"><code>name = &#34;Charlie&#34;
+age = 22
+formatted_string = &#34;My name is %s and I am %d years old.&#34; % (name, age)
+</code></pre></p>
+
+
+<span style="color: #FFC7ED;">#python</span>
+<a href="http://localhost:1313/2024/python-types/">Python Types</a> - Sep 25, 2024
+<p><h1 id="collection-data-types">Collection Data Types</h1>
+<p>get length: len(dict)</p>
+<h2 id="list">List</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>list <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>]
+</span></span></code></pre></div><p>Lists are used to store multiple items in a single variable.</p>
+<ol>
+<li>ordered</li>
+<li>changeable</li>
+<li>allow duplicate values</li>
+</ol>
+<h2 id="tuple">Tuple</h2>
+<h2 id="set">Set</h2>
+<h2 id="dictionary">Dictionary</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>dict <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;a&#34;</span>: <span style="color:#e6db74">&#34;abc&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;year&#34;</span>: <span style="color:#ae81ff">1986</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol>
+<li>not allow duplicate values - Dictionaries cannot have two items with the same key.</li>
+<li>changeable</li>
+<li>unordered in old version, ordered in new version</li>
+</ol></p>
+
+
+<span style="color: #FFC7ED;">#python</span>
+<a href="http://localhost:1313/2024/python-virtual-env/">Python Virtual Environment</a> - Sep 25, 2024
+<p><p>因为有时候需要不同的python的版本来运行程序，所以就出现了版本管理器pyenv，类似于nodejs nvm。</p></p>
+
+
+<span style="color: #FFC7ED;">#system</span>
+<a href="http://localhost:1313/2024/windows-chkdsk/">chkdsk 修复DiskGenius分区时Bitamp中有标记被使用的Cluster</a> - Sep 25, 2024
+<p><pre tabindex="0"><code>chkdisk /f /x d:
+</code></pre><p><code>d:</code> 是所需要修复的磁盘。</p></p>
+
+
+<span style="color: #FFC7ED;">#javascript</span>
+<a href="http://localhost:1313/2024/javascript-prototype-chain/">JavaScript Prototype Chain</a> - Aug 14, 2024
+<p><p>prototype chain is inheritance mechanism in JavaScript.</p>
+<p>JavaScript objects have a link to prototype objects.</p>
+<p>When trying to access a property of an object, the property will not only be sought on the object, but on the prototype of the object.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">o</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">b</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// __proto__ sets the [[Prototype]]. It&#39;s specified here
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// as another object literal.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">__proto__</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">b</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">c</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">4</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// o.[[Prototype]] has properties b and c.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// o.[[Prototype]].[[Prototype]] is Object.prototype (we will explain
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// what that means later).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Finally, o.[[Prototype]].[[Prototype]].[[Prototype]] is null.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// This is the end of the prototype chain, as null,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// by definition, has no [[Prototype]].
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Thus, the full prototype chain looks like:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// { a: 1, b: 2 } ---&gt; { b: 3, c: 4 } ---&gt; Object.prototype ---&gt; null
+</span></span></span></code></pre></div></p>
+
+
+<span style="color: #FFC7ED;">#vim</span>
+<a href="http://localhost:1313/2024/vim-configuration/">Vim Configuration</a> - Aug 13, 2024
+<p><p>I dont know its a good idea or bad idea to decide to use vim.</p>
+<p>I just wanna give it a try&hellip;</p>
+<p>List all the .vim files that Vim loads:</p>
+<pre tabindex="0"><code>:scriptnames
+</code></pre><p>In default, vim dont automaticalyy create <code>~/.vimrc</code></p>
+<p><code>:e $MYVIMRC</code> open &amp; edit the current .vimrc that you are using, then use Ctrl + G to view the path in status bar.</p></p>
 
 
 <span style="color: #FFC7ED;">#linux</span>
-<a href="http://localhost:1313/2024/ssh-cannot-find-hostkey/">ssh-keygen</a> - Aug 11, 2024
-<p>When i used systemctl status sshd, i saw:
-Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ecdsa_key Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ed25519_key Use sudo ssh-keygen -A to generate all missing host keys.</p>
-
-
-<span style="color: #FFC7ED;">#linux</span>
-<a href="http://localhost:1313/2024/linux-login-with-sshkey/">服务器配置ssh仅允许使用pubkey验证</a> - Aug 11, 2024
-<p>本地要有keypair，可以是rsa也可以是ed25519。 $ ssh-keygen 将本地的pubkey复制到服务器的~</p>
-
-
-<span style="color: #FFC7ED;">#linux</span>
-<a href="http://localhost:1313/2024/ssh-gothrough-proxy/">SSH 客户端配置代理</a> - Aug 11, 2024
-<p>其实是机场屏蔽了22端口，才导致我用不了ssh。但既然查都查了，还是把ssh客户端单独配置代理方法记</p>
-
-
-<span style="color: #FFC7ED;">#css</span>
-<a href="http://localhost:1313/2024/css-dark-theme-switch/">CSS 黑暗/日间主题切换</a> - Aug 11, 2024
-<p>使用媒体查询prefers-color-scheme @media (prefers-color-scheme: {mode}) { } :root { --color: #333; --bg-color: #eee; } @media (prefers-color-scheme: dark) { :root { --color: #ccc; --bg-color: #1f1f1f; } }</p>
-
-
-<span style="color: #FFC7ED;">#linux</span>
-<a href="http://localhost:1313/2024/linux-magnifier-shortcut/">ArchLinux Magnifier Shortcut</a> - Aug 11, 2024
-<p>在缩放浏览器时，不小心使用了放大镜 CTRL + Super + 鼠标滚轮即可使用放大镜 我还另外发现了，使用 Super + L 即可重新锁</p>
-
-
-<span style="color: #FFC7ED;">#hugo</span>
-<a href="http://localhost:1313/2024/hugo-deploy-shell/">Hugo Deploy Shell</a> - Aug 10, 2024
-<p>For a long time, I always used Hexo as my blogging generator. But when i switched to Hugo, the things&rsquo;re completely different. The deployment methods changed .
-For now, if i wanna host my stuff on somethng like Github Pages, i should utillize so called &ldquo;continuous deployment&rdquo; which leverages on Github Action.</p>
+<a href="http://localhost:1313/2024/pacman-source-list/">Pacman Mirrorlist更新</a> - Aug 13, 2024
+<p><pre tabindex="0"><code>$ sudo pacman -Sy
+</code></pre><p>出现了：</p>
+<pre tabindex="0"><code>error: failed retrieving file &#39;core.db&#39; from mirror.f4st.host : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds
+error: failed retrieving file &#39;extra.db&#39; from mirror.f4st.host : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds
+error: failed retrieving file &#39;multilib.db&#39; from mirror.f4st.host : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds
+warning: too many errors from mirror.f4st.host, skipping for the remainder of this transaction
+error: failed retrieving file &#39;core.db&#39; from mirror.f4st.host : SSL connection timeout
+error: failed retrieving file &#39;extra.db&#39; from mirror.f4st.host : SSL connection timeout
+</code></pre><p>而<code>mirror.f4st.host</code>已经在2024.6.30关闭力：https://lists.archlinux.org/archives/list/arch-mirrors@lists.archlinux.org/message/VQAMXLF6RIZHXQF6O3UO3AWWPSEQFCB7/</p></p>
 
 
 
 
 
-<a href="/2024/page/2/">Next</a>
+<a href="/2024/page/2/">Next &gt;</a>
 
         </main>
         <footer>
-            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">All articles</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://moonlab.top">LingC</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">All articles</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://moonlab.top">LingC</a> are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
 
         </footer>
         

@@ -5,78 +5,183 @@
     <link>http://localhost:1313/</link>
     <description>Recent content on MoonLab - TIL</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 11 Aug 2024 18:48:43 +0800</lastBuildDate>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 23 Feb 2025 00:13:59 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git commit sign失败 windows</title>
+      <link>http://localhost:1313/2025/git-commit-sign-error/</link>
+      <pubDate>Sun, 23 Feb 2025 00:13:59 +0800</pubDate>
+      <guid>http://localhost:1313/2025/git-commit-sign-error/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --list-secret-keys --keyid-format LONG&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg: skipped &amp;#34;name &amp;lt;name@mail.com&amp;gt;&amp;#34;: secret key not available&#xA;gpg: signing failed: secret key not available&#xA;error: gpg failed to sign the data&#xA;fatal: failed to write commit object&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;解决方法：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git config --global gpg.program &amp;#34;C:\Program Files (x86)\GnuPG\bin\gpg.exe&amp;#34;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>TS</title>
+      <link>http://localhost:1313/2025/ts-1/</link>
+      <pubDate>Fri, 21 Feb 2025 00:25:59 +0800</pubDate>
+      <guid>http://localhost:1313/2025/ts-1/</guid>
+      <description>&lt;p&gt;安装 prisma client&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pnpm install @prisma/client&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;生成-prisma-client&#34;&gt; &lt;strong&gt;生成 Prisma Client&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;安装 &lt;code&gt;@prisma/client&lt;/code&gt; 后，需要生成 Prisma Client。运行以下命令：&lt;/p&gt;&#xA;&lt;p&gt;npx prisma generate&lt;/p&gt;&#xA;&lt;p&gt;这会根据你的 &lt;code&gt;schema.prisma&lt;/code&gt; 文件生成 Prisma Client。生成的文件通常位于 &lt;code&gt;node_modules/.prisma/client&lt;/code&gt; 目录中。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TS</title>
+      <link>http://localhost:1313/2025/ts/</link>
+      <pubDate>Fri, 21 Feb 2025 00:25:59 +0800</pubDate>
+      <guid>http://localhost:1313/2025/ts/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;Link&lt;/span&gt; } &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;next/link&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在项目中用加上curly braces会导致报错：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it&amp;#39;s defined in, or you might have mixed up default and named imports.&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;因为next/link已经有default export了，所以不需要加上两个花括号。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Github Verified Commit Signature</title>
+      <link>http://localhost:1313/2025/github-commit-signature/</link>
+      <pubDate>Fri, 14 Feb 2025 21:56:52 +0800</pubDate>
+      <guid>http://localhost:1313/2025/github-commit-signature/</guid>
+      <description>&lt;h3 id=&#34;supported-gpg-key-algorithmshttpsdocsgithubcomenauthenticationmanaging-commit-signature-verificationchecking-for-existing-gpg-keyssupported-gpg-key-algorithms&#34;&gt;&lt;a href=&#34;https://docs.github.com/en/authentication/managing-commit-signature-verification/checking-for-existing-gpg-keys#supported-gpg-key-algorithms&#34;&gt;Supported GPG key algorithms&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;GitHub supports several GPG key algorithms. If you try to add a key generated with an unsupported algorithm, you may encounter an error.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;RSA&lt;/li&gt;&#xA;&lt;li&gt;ElGamal&lt;/li&gt;&#xA;&lt;li&gt;DSA&lt;/li&gt;&#xA;&lt;li&gt;ECDH&lt;/li&gt;&#xA;&lt;li&gt;ECDSA&lt;/li&gt;&#xA;&lt;li&gt;EdDSA&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Python Replace Space Char</title>
+      <link>http://localhost:1313/2025/python-encoding/</link>
+      <pubDate>Fri, 14 Feb 2025 20:39:59 +0800</pubDate>
+      <guid>http://localhost:1313/2025/python-encoding/</guid>
+      <description>&lt;p&gt;UnicodeDecodeError: &amp;lsquo;gbk&amp;rsquo; codec can&amp;rsquo;t decode byte 0xad in position 211: illegal multibyte sequence&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python Replace Space Char</title>
+      <link>http://localhost:1313/2025/python-replace-space-char/</link>
+      <pubDate>Fri, 14 Feb 2025 15:28:59 +0800</pubDate>
+      <guid>http://localhost:1313/2025/python-replace-space-char/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_trim&lt;/span&gt;(s: str):&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; s&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;replace(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;replace(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;strip()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;s.replace(&#39; &#39;, &#39;&#39;)&lt;/code&gt;的确删除了句中的空格，但并没有把字符串末尾的空格删去，所以我不得不加了一个&lt;code&gt;strip()&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python Replace Space Char</title>
+      <link>http://localhost:1313/2025/python-optimization/</link>
+      <pubDate>Fri, 14 Feb 2025 15:23:39 +0800</pubDate>
+      <guid>http://localhost:1313/2025/python-optimization/</guid>
+      <description>&lt;p&gt;python包或模块的全局代码会在导入时自动运行。比如，包中的类、函数或者任何变量在导入时都会被初始化。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python String Format</title>
+      <link>http://localhost:1313/2024/python-string-format/</link>
+      <pubDate>Thu, 26 Sep 2024 20:28:43 +0800</pubDate>
+      <guid>http://localhost:1313/2024/python-string-format/</guid>
+      <description>&lt;h1 id=&#34;f-strings-python-36&#34;&gt;f-strings (Python 3.6+)&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;name = &amp;#34;Alice&amp;#34;&#xD;&#xA;age = 30&#xD;&#xA;formatted_string = f&amp;#34;My name is {name} and I am {age} years old.&amp;#34;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;strformat&#34;&gt;str.format()&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;name = &amp;#34;Bob&amp;#34;&#xD;&#xA;age = 25&#xD;&#xA;formatted_string = &amp;#34;My name is {} and I am {} years old.&amp;#34;.format(name, age)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;percent--formatting&#34;&gt;Percent % formatting&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;name = &amp;#34;Charlie&amp;#34;&#xD;&#xA;age = 22&#xD;&#xA;formatted_string = &amp;#34;My name is %s and I am %d years old.&amp;#34; % (name, age)&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Python Types</title>
+      <link>http://localhost:1313/2024/python-types/</link>
+      <pubDate>Wed, 25 Sep 2024 20:28:43 +0800</pubDate>
+      <guid>http://localhost:1313/2024/python-types/</guid>
+      <description>&lt;h1 id=&#34;collection-data-types&#34;&gt;Collection Data Types&lt;/h1&gt;&#xA;&lt;p&gt;get length: len(dict)&lt;/p&gt;&#xA;&lt;h2 id=&#34;list&#34;&gt;List&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;list &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Lists are used to store multiple items in a single variable.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;ordered&lt;/li&gt;&#xA;&lt;li&gt;changeable&lt;/li&gt;&#xA;&lt;li&gt;allow duplicate values&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;tuple&#34;&gt;Tuple&lt;/h2&gt;&#xA;&lt;h2 id=&#34;set&#34;&gt;Set&lt;/h2&gt;&#xA;&lt;h2 id=&#34;dictionary&#34;&gt;Dictionary&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dict &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;abc&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;year&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1986&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;&#xA;&lt;li&gt;not allow duplicate values - Dictionaries cannot have two items with the same key.&lt;/li&gt;&#xA;&lt;li&gt;changeable&lt;/li&gt;&#xA;&lt;li&gt;unordered in old version, ordered in new version&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>Python Virtual Environment</title>
+      <link>http://localhost:1313/2024/python-virtual-env/</link>
+      <pubDate>Wed, 25 Sep 2024 20:28:43 +0800</pubDate>
+      <guid>http://localhost:1313/2024/python-virtual-env/</guid>
+      <description>&lt;p&gt;因为有时候需要不同的python的版本来运行程序，所以就出现了版本管理器pyenv，类似于nodejs nvm。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>chkdsk 修复DiskGenius分区时Bitamp中有标记被使用的Cluster</title>
+      <link>http://localhost:1313/2024/windows-chkdsk/</link>
+      <pubDate>Wed, 25 Sep 2024 20:25:43 +0800</pubDate>
+      <guid>http://localhost:1313/2024/windows-chkdsk/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chkdisk /f /x d:&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;d:&lt;/code&gt; 是所需要修复的磁盘。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JavaScript Prototype Chain</title>
+      <link>http://localhost:1313/2024/javascript-prototype-chain/</link>
+      <pubDate>Wed, 14 Aug 2024 12:55:43 +0800</pubDate>
+      <guid>http://localhost:1313/2024/javascript-prototype-chain/</guid>
+      <description>&lt;p&gt;prototype chain is inheritance mechanism in JavaScript.&lt;/p&gt;&#xA;&lt;p&gt;JavaScript objects have a link to prototype objects.&lt;/p&gt;&#xA;&lt;p&gt;When trying to access a property of an object, the property will not only be sought on the object, but on the prototype of the object.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;o&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// __proto__ sets the [[Prototype]]. It&amp;#39;s specified here&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// as another object literal.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;__proto__&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  },&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// o.[[Prototype]] has properties b and c.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// o.[[Prototype]].[[Prototype]] is Object.prototype (we will explain&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// what that means later).&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Finally, o.[[Prototype]].[[Prototype]].[[Prototype]] is null.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// This is the end of the prototype chain, as null,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// by definition, has no [[Prototype]].&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Thus, the full prototype chain looks like:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// { a: 1, b: 2 } ---&amp;gt; { b: 3, c: 4 } ---&amp;gt; Object.prototype ---&amp;gt; null&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Vim Configuration</title>
+      <link>http://localhost:1313/2024/vim-configuration/</link>
+      <pubDate>Tue, 13 Aug 2024 21:27:37 +0800</pubDate>
+      <guid>http://localhost:1313/2024/vim-configuration/</guid>
+      <description>&lt;p&gt;I dont know its a good idea or bad idea to decide to use vim.&lt;/p&gt;&#xA;&lt;p&gt;I just wanna give it a try&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;List all the .vim files that Vim loads:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:scriptnames&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In default, vim dont automaticalyy create &lt;code&gt;~/.vimrc&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;:e $MYVIMRC&lt;/code&gt; open &amp;amp; edit the current .vimrc that you are using, then use Ctrl + G to view the path in status bar.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pacman Mirrorlist更新</title>
+      <link>http://localhost:1313/2024/pacman-source-list/</link>
+      <pubDate>Tue, 13 Aug 2024 17:17:43 +0800</pubDate>
+      <guid>http://localhost:1313/2024/pacman-source-list/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ sudo pacman -Sy&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;出现了：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;error: failed retrieving file &amp;#39;core.db&amp;#39; from mirror.f4st.host : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds&#xD;&#xA;error: failed retrieving file &amp;#39;extra.db&amp;#39; from mirror.f4st.host : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds&#xD;&#xA;error: failed retrieving file &amp;#39;multilib.db&amp;#39; from mirror.f4st.host : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds&#xD;&#xA;warning: too many errors from mirror.f4st.host, skipping for the remainder of this transaction&#xD;&#xA;error: failed retrieving file &amp;#39;core.db&amp;#39; from mirror.f4st.host : SSL connection timeout&#xD;&#xA;error: failed retrieving file &amp;#39;extra.db&amp;#39; from mirror.f4st.host : SSL connection timeout&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;而&lt;code&gt;mirror.f4st.host&lt;/code&gt;已经在2024.6.30关闭力：https://lists.archlinux.org/archives/list/arch-mirrors@lists.archlinux.org/message/VQAMXLF6RIZHXQF6O3UO3AWWPSEQFCB7/&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Linux 使用zsh</title>
+      <link>http://localhost:1313/2024/linux-zsh/</link>
+      <pubDate>Mon, 12 Aug 2024 06:35:43 +0800</pubDate>
+      <guid>http://localhost:1313/2024/linux-zsh/</guid>
+      <description>&lt;p&gt;先查看当前的shell：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ echo $SHELL&#xD;&#xA;/bin/bash&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装zsh:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ sudo pacman -S zsh zsh-completions&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;making-zsh-the-default-shell&#34;&gt;Making zsh the default shell&lt;/h1&gt;&#xA;&lt;p&gt;List all installed shell:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ chsh -l&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将&lt;code&gt;/bin/zsh&lt;/code&gt;设为默认：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ chsh -s /bin/zsh&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;docker run -d &lt;br&gt;&#xA;&amp;ndash;name artalk &lt;br&gt;&#xA;-p 8080:23366 &lt;br&gt;&#xA;-v $(pwd)/data:/data &lt;br&gt;&#xA;-e &amp;ldquo;ATK_LOCALE=zh-CN&amp;rdquo; &lt;br&gt;&#xA;-e &amp;ldquo;ATK_SITE_DEFAULT=Mooblab&amp;rdquo; &lt;br&gt;&#xA;-e &amp;ldquo;ATK_TRUSTED_DOMAINS=https://moonlab.top&amp;rdquo; &lt;br&gt;&#xA;artalk/artalk-go&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Docker Volume迁移</title>
       <link>http://localhost:1313/2024/docker-volume-transfer/</link>
       <pubDate>Sun, 11 Aug 2024 18:48:43 +0800</pubDate>
       <guid>http://localhost:1313/2024/docker-volume-transfer/</guid>
-      <description>其实我一直都用不好docker，因为我的经验很少，直到现在我也没有遇到非使用docker不可的情况，</description>
+      <description>&lt;p&gt;其实我一直都用不好docker，因为我的经验很少，直到现在我也没有遇到非使用docker不可的情况，所以其实我就没有什么动力去用docker。而且我一直在怀疑，在低配的个人服务器上，运行docker的性能究竟如何。&lt;/p&gt;</description>
     </item>
     <item>
       <title>ssh-keygen</title>
       <link>http://localhost:1313/2024/ssh-cannot-find-hostkey/</link>
       <pubDate>Sun, 11 Aug 2024 15:50:43 +0800</pubDate>
       <guid>http://localhost:1313/2024/ssh-cannot-find-hostkey/</guid>
-      <description>When i used systemctl status sshd, i saw:&#xA;Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ecdsa_key Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ed25519_key Use sudo ssh-keygen -A to generate all missing host keys.</description>
+      <description>&lt;p&gt;When i used systemctl status sshd, i saw:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ecdsa_key&#xD;&#xA;Aug 11 03:41:35 NekoPara01 sshd[1045]: error: Could not load host key: /etc/ssh/ssh_host_ed25519_key&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Use &lt;code&gt;sudo ssh-keygen -A&lt;/code&gt; to generate all missing host keys.&lt;/p&gt;</description>
     </item>
     <item>
       <title>服务器配置ssh仅允许使用pubkey验证</title>
       <link>http://localhost:1313/2024/linux-login-with-sshkey/</link>
       <pubDate>Sun, 11 Aug 2024 15:32:43 +0800</pubDate>
       <guid>http://localhost:1313/2024/linux-login-with-sshkey/</guid>
-      <description>本地要有keypair，可以是rsa也可以是ed25519。 $ ssh-keygen 将本地的pubkey复制到服务器的~</description>
+      <description>&lt;p&gt;本地要有keypair，可以是rsa也可以是ed25519。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ssh-keygen&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将本地的pubkey复制到服务器的&lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;中：&lt;/p&gt;</description>
     </item>
     <item>
       <title>SSH 客户端配置代理</title>
       <link>http://localhost:1313/2024/ssh-gothrough-proxy/</link>
       <pubDate>Sun, 11 Aug 2024 14:09:25 +0800</pubDate>
       <guid>http://localhost:1313/2024/ssh-gothrough-proxy/</guid>
-      <description>其实是机场屏蔽了22端口，才导致我用不了ssh。但既然查都查了，还是把ssh客户端单独配置代理方法记</description>
+      <description>&lt;p&gt;其实是机场屏蔽了22端口，才导致我用不了ssh。但既然查都查了，还是把ssh客户端单独配置代理方法记录下来吧。&lt;/p&gt;</description>
     </item>
     <item>
       <title>CSS 黑暗/日间主题切换</title>
       <link>http://localhost:1313/2024/css-dark-theme-switch/</link>
       <pubDate>Sun, 11 Aug 2024 04:51:37 +0800</pubDate>
       <guid>http://localhost:1313/2024/css-dark-theme-switch/</guid>
-      <description>使用媒体查询prefers-color-scheme @media (prefers-color-scheme: {mode}) { } :root { --color: #333; --bg-color: #eee; } @media (prefers-color-scheme: dark) { :root { --color: #ccc; --bg-color: #1f1f1f; } }</description>
+      <description>&lt;p&gt;使用媒体查询prefers-color-scheme&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@media (prefers-color-scheme: {mode}) {&#xD;&#xA;&#xD;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;:root {&#xD;&#xA;  --color: #333;&#xD;&#xA;  --bg-color: #eee;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;@media (prefers-color-scheme: dark) {&#xD;&#xA;  :root {&#xD;&#xA;    --color: #ccc;&#xD;&#xA;    --bg-color: #1f1f1f;&#xD;&#xA;  }&#xD;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果要判断当前的主题，可以用：&lt;/p&gt;</description>
     </item>
     <item>
       <title>ArchLinux Magnifier Shortcut</title>
       <link>http://localhost:1313/2024/linux-magnifier-shortcut/</link>
       <pubDate>Sun, 11 Aug 2024 04:40:39 +0800</pubDate>
       <guid>http://localhost:1313/2024/linux-magnifier-shortcut/</guid>
-      <description>在缩放浏览器时，不小心使用了放大镜 CTRL + Super + 鼠标滚轮即可使用放大镜 我还另外发现了，使用 Super + L 即可重新锁</description>
+      <description>&lt;p&gt;在缩放浏览器时，不小心使用了放大镜&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;CTRL + Super + 鼠标滚轮&lt;/code&gt;即可使用放大镜&lt;/p&gt;&#xA;&lt;p&gt;我还另外发现了，使用 &lt;code&gt;Super + L&lt;/code&gt; 即可重新锁定电脑，适合在离开电脑时使用。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo Deploy Shell</title>
       <link>http://localhost:1313/2024/hugo-deploy-shell/</link>
       <pubDate>Sat, 10 Aug 2024 16:01:59 +0800</pubDate>
       <guid>http://localhost:1313/2024/hugo-deploy-shell/</guid>
-      <description>For a long time, I always used Hexo as my blogging generator. But when i switched to Hugo, the things&amp;rsquo;re completely different. The deployment methods changed .&#xA;For now, if i wanna host my stuff on somethng like Github Pages, i should utillize so called &amp;ldquo;continuous deployment&amp;rdquo; which leverages on Github Action.</description>
+      <description>&lt;p&gt;For a long time, I always used Hexo as my blogging generator. But when i switched to Hugo, the things&amp;rsquo;re completely different. The deployment methods changed .&lt;/p&gt;&#xA;&lt;p&gt;For now, if i wanna host my stuff on somethng like Github Pages, i should utillize so called &amp;ldquo;continuous deployment&amp;rdquo; which leverages on Github Action. I&amp;rsquo;m required to push my primitive content into remote repository, and let the remote finish the building process.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo Partial</title>
       <link>http://localhost:1313/2024/hugo-partial/</link>
       <pubDate>Sat, 10 Aug 2024 14:04:26 +0800</pubDate>
       <guid>http://localhost:1313/2024/hugo-partial/</guid>
-      <description>Partial {{ partial &amp;#34;footer.html&amp;#34; }} 我看到有的hugo模板调用partial方法会传入上下文参数，但是不传也不会报错。 然而 partialCached 就</description>
+      <description>&lt;h1 id=&#34;partial&#34;&gt;Partial&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{ partial &amp;#34;footer.html&amp;#34; }}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;我看到有的hugo模板调用partial方法会传入上下文参数，但是不传也不会报错。&lt;/p&gt;&#xA;&lt;p&gt;然而 partialCached 就必须传入上下文，否则会报错：&lt;/p&gt;</description>
     </item>
     <item>
       <title>ArchLinux 打开终端快捷键</title>
       <link>http://localhost:1313/2024/linux-shortcuts/</link>
       <pubDate>Sat, 10 Aug 2024 12:40:45 +0800</pubDate>
       <guid>http://localhost:1313/2024/linux-shortcuts/</guid>
-      <description>CTRL + ALT + T Open terminal ALT + SHIFT + F4 Open terminal here in file explorer 然而在我输入第二个快捷键时，不小心按成了 CTRL + ALT + F4 整个世界清净了</description>
+      <description>&lt;p&gt;CTRL + ALT + T Open terminal&lt;/p&gt;&#xA;&lt;p&gt;ALT + SHIFT + F4 Open terminal here in file explorer&lt;/p&gt;&#xA;&lt;p&gt;然而在我输入第二个快捷键时，不小心按成了&lt;/p&gt;&#xA;&lt;p&gt;CTRL + ALT + F4&lt;/p&gt;&#xA;&lt;p&gt;整个世界清净了，似乎这个快捷键会关闭所有窗口，包括我的桌面程序KDE也死掉了&lt;/p&gt;</description>
     </item>
     <item>
       <title>Today I Learned</title>
       <link>http://localhost:1313/2024/today-i-learned/</link>
       <pubDate>Sat, 10 Aug 2024 12:16:47 +0800</pubDate>
       <guid>http://localhost:1313/2024/today-i-learned/</guid>
-      <description>今天我发现了一种很有意思的记录方法：https://simonwillison.net/2022/N</description>
+      <description>&lt;p&gt;今天我发现了一种很有意思的记录方法：https://simonwillison.net/2022/Nov/6/what-to-blog-about/&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

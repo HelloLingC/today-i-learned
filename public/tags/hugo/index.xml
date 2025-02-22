@@ -5,7 +5,7 @@
     <link>http://localhost:1313/tags/hugo/</link>
     <description>Recent content in Hugo on MoonLab - TIL</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sat, 10 Aug 2024 16:01:59 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,14 +13,14 @@
       <link>http://localhost:1313/2024/hugo-deploy-shell/</link>
       <pubDate>Sat, 10 Aug 2024 16:01:59 +0800</pubDate>
       <guid>http://localhost:1313/2024/hugo-deploy-shell/</guid>
-      <description>For a long time, I always used Hexo as my blogging generator. But when i switched to Hugo, the things&amp;rsquo;re completely different. The deployment methods changed .&#xA;For now, if i wanna host my stuff on somethng like Github Pages, i should utillize so called &amp;ldquo;continuous deployment&amp;rdquo; which leverages on Github Action.</description>
+      <description>&lt;p&gt;For a long time, I always used Hexo as my blogging generator. But when i switched to Hugo, the things&amp;rsquo;re completely different. The deployment methods changed .&lt;/p&gt;&#xA;&lt;p&gt;For now, if i wanna host my stuff on somethng like Github Pages, i should utillize so called &amp;ldquo;continuous deployment&amp;rdquo; which leverages on Github Action. I&amp;rsquo;m required to push my primitive content into remote repository, and let the remote finish the building process.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo Partial</title>
       <link>http://localhost:1313/2024/hugo-partial/</link>
       <pubDate>Sat, 10 Aug 2024 14:04:26 +0800</pubDate>
       <guid>http://localhost:1313/2024/hugo-partial/</guid>
-      <description>Partial {{ partial &amp;#34;footer.html&amp;#34; }} 我看到有的hugo模板调用partial方法会传入上下文参数，但是不传也不会报错。 然而 partialCached 就</description>
+      <description>&lt;h1 id=&#34;partial&#34;&gt;Partial&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{ partial &amp;#34;footer.html&amp;#34; }}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;我看到有的hugo模板调用partial方法会传入上下文参数，但是不传也不会报错。&lt;/p&gt;&#xA;&lt;p&gt;然而 partialCached 就必须传入上下文，否则会报错：&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

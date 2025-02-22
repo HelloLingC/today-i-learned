@@ -29,14 +29,18 @@
 
 <p>Browse by tags</p>
 <ul class="tag-list">
-    <a href="/">all(10)</a> -
+    <a href="/">all(26)</a> -
     
     <li>
         <a href="/tags/css/">css (1)</a>
     </li>
     
     <li>
-        <a href="/tags/docker/">docker (1)</a>
+        <a href="/tags/docker/">docker (2)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/git/">git (2)</a>
     </li>
     
     <li>
@@ -44,7 +48,27 @@
     </li>
     
     <li>
-        <a href="/tags/linux/">linux (6)</a>
+        <a href="/tags/javascript/">javascript (1)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/linux/">linux (7)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/python/">python (7)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/system/">system (1)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/typescript/">typescript (2)</a>
+    </li>
+    
+    <li>
+        <a href="/tags/vim/">vim (1)</a>
     </li>
     
 </ul>
@@ -60,8 +84,30 @@
  
 
 <span style="color: #FFC7ED;">#docker</span>
+<a href="http://localhost:1313/2024/linux-zsh/">Linux 使用zsh</a> - Aug 12, 2024
+<p><p>先查看当前的shell：</p>
+<pre tabindex="0"><code>$ echo $SHELL
+/bin/bash
+</code></pre><p>安装zsh:</p>
+<pre tabindex="0"><code>$ sudo pacman -S zsh zsh-completions
+</code></pre><h1 id="making-zsh-the-default-shell">Making zsh the default shell</h1>
+<p>List all installed shell:</p>
+<pre tabindex="0"><code>$ chsh -l
+</code></pre><p>将<code>/bin/zsh</code>设为默认：</p>
+<pre tabindex="0"><code>$ chsh -s /bin/zsh
+</code></pre><p>docker run -d <br>
+&ndash;name artalk <br>
+-p 8080:23366 <br>
+-v $(pwd)/data:/data <br>
+-e &ldquo;ATK_LOCALE=zh-CN&rdquo; <br>
+-e &ldquo;ATK_SITE_DEFAULT=Mooblab&rdquo; <br>
+-e &ldquo;ATK_TRUSTED_DOMAINS=https://moonlab.top&rdquo; <br>
+artalk/artalk-go</p></p>
+
+
+<span style="color: #FFC7ED;">#docker</span>
 <a href="http://localhost:1313/2024/docker-volume-transfer/">Docker Volume迁移</a> - Aug 11, 2024
-<p>其实我一直都用不好docker，因为我的经验很少，直到现在我也没有遇到非使用docker不可的情况，</p>
+<p><p>其实我一直都用不好docker，因为我的经验很少，直到现在我也没有遇到非使用docker不可的情况，所以其实我就没有什么动力去用docker。而且我一直在怀疑，在低配的个人服务器上，运行docker的性能究竟如何。</p></p>
 
 
 
@@ -69,7 +115,7 @@
 
         </main>
         <footer>
-            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">All articles</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://moonlab.top">LingC</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">All articles</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://moonlab.top">LingC</a> are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
 
         </footer>
         

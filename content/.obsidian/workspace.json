@@ -1,0 +1,186 @@
+{
+  "main": {
+    "id": "4434a75073fefdf9",
+    "type": "split",
+    "children": [
+      {
+        "id": "ba1109042ca21f1f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aab0bef962550b7f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2025/ts 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ts 1"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "370f90ce6d90826b",
+    "type": "split",
+    "children": [
+      {
+        "id": "fb5e7be017646ed8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b7dc8ee4a43df121",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "521ae114f08fcde1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e4ea4193b809ad39",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a51f3a38da83ac3f",
+    "type": "split",
+    "children": [
+      {
+        "id": "c4c4803089d53915",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4ff1902427b908e4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2025/ts 1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for ts 1"
+            }
+          },
+          {
+            "id": "8cff07044965e05b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2025/python-optimization.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from python-optimization"
+            }
+          },
+          {
+            "id": "e61c8772d4d59074",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "454216c56a2da1b6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2025/python-optimization.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of python-optimization"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "aab0bef962550b7f",
+  "lastOpenFiles": [
+    "2025/python-optimization.md",
+    "2025/github-commit-signature.md",
+    "2025/nvidia.md",
+    "2025/Pasted image 20250214161541.png",
+    "2024/today-i-learned.md",
+    "2024/vim-configuration.md",
+    "2025/git-commit-sign-error.md",
+    "Pasted image 20250222165517.png",
+    "2025/ts 1.md",
+    "2025/ts.md",
+    "2025/python-replace-space-char.md",
+    "2025/python-encoding.md"
+  ]
+}
